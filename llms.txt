@@ -1,0 +1,34 @@
+# 김예일 (Yale Kim)
+
+> 김예일(Yale Kim)은 프로덕트 디자이너, UX/UI 디자이너이자 디자인 엔지니어로 Cliwant에서 크리에이티브 엔지니어로 일합니다. 리서치와 화면 설계부터 프론트엔드 구현, 브랜드와 영상까지 직접 만듭니다. Yale Kim is a product designer, UX/UI designer, and design engineer working as a creative engineer at Cliwant.
+
+- 이름: 김예일 (영문 Yale Kim)
+- 직함: Creative Engineer, Cliwant (2023.12 – 현재)
+- 직무: 프로덕트 디자이너, UX/UI 디자이너, 디자인 엔지니어, UX 리서처, 브랜드 디자이너 (Product Designer, UX/UI Designer, Design Engineer)
+- 기술: UX 리서치, 사용자 인터뷰, Figma 디자인 시스템, 프론트엔드(Next.js, FastAPI, PWA), 브랜딩, 썸네일 디자인, 유튜브 영상 제작
+- 채용과 협업 문의: yale414@gmail.com
+- 언어: 한국어, 영어(원어민 수준), 일본어(상급)
+- 학력: 한동대학교 제품디자인/시각디자인 복수 전공 (2017 – 2024)
+- 병역: US Army, KATUSA (2019.07 – 2021.01), Camp Casey, HHC USAG
+
+## 케이스 스터디 (디자이너 포트폴리오)
+
+- [Cliwant Agent](https://codeisthenewdesign.github.io/work/cliwant-agent.html): 수십 년째 그대로인 공공 입찰 업무를 AI 기반 SaaS로 다시 설계해 검증하고, 말로 묻고 답을 받는 입찰 에이전트로 발전시켰습니다. 입찰 실무자 인터뷰에서 같은 공고를 판단하는 데 숙련자는 30분, 신규 담당자는 100분 넘게 걸리는 차이가 정보 비대칭에서 나온다는 것을 찾았습니다. 김예일은 MVP 시점에 합류해 리서치, UI 설계, 프론트엔드, QA를 맡았습니다. (2024.01 – 현재)
+- [SnapShorts](https://codeisthenewdesign.github.io/work/snapshorts.html): 주제만 고르면 AI가 제목과 대본, 음성, 이미지를 만들어 9:16 숏폼 영상으로 합쳐 주는 제품입니다. 미국 사용자를 대상으로 기획, 디자인, 개발, 배포를 혼자 맡았습니다. 주제 찾기부터 채널 업로드까지 7단계를 자동화했고, 한 번에 끝내는 Snap Mode와 단계마다 고르는 Manual 모드를 만들었습니다. (2026.02)
+- [Bloom](https://codeisthenewdesign.github.io/work/bloom.html): 개발자, 창업자, 마케터, 연구자가 모이는 한국 최대 AI 커뮤니티 Bloom에서 Creative Lead로 브랜드와 캐릭터, 행사 썸네일, 웹사이트, 유튜브를 혼자 맡았습니다. 40회 넘는 행사를 열면서 고유 신청자 7,497명, 재방문율 52%, 유튜브 구독자 4,250명을 기록했습니다. (2026.04 – 2026.10)
+
+## 경력
+
+- [이력서](https://codeisthenewdesign.github.io/work/resume.html)
+- Cliwant, Product Designer (2023.12 – 현재): 입찰 기업이 맞는 기회를 찾고 더 높은 확률로 수주하도록 돕는 B2B SaaS를 설계합니다. 리서치부터 UI 설계, 디자인 시스템 정리, 프론트엔드 구현, QA까지 맡고 있습니다.
+- Bloom, Creative Lead (2026.04 – 2026.10)
+- 우아한형제들 산학 협력 연구 (2023.03 – 2023.11, 한동대 졸업 프로젝트): AI와 빅데이터로 사용자의 식습관을 이해하는 초개인화 배달의민족 앱을 연구했습니다.
+- emocog, UI Designer 인턴 (2021.06 – 2021.08): 고령 사용자를 위한 경도인지장애(MCI) 검사 앱의 UI를 디자인했습니다.
+
+## 연락
+
+- 이메일: yale414@gmail.com
+- 미팅 예약: https://cal.com/yalekim/30min
+- LinkedIn: https://www.linkedin.com/in/yale4/
+- 브런치: https://brunch.co.kr/@yalekim
+- Instagram: https://www.instagram.com/yebong2run/

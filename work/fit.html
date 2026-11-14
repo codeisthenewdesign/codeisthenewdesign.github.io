@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/icons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/icons/favicon-64.png">
+<link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- seo -->
+<title>김예일</title>
+<meta name="description" content="김예일(Yale Kim) 포트폴리오">
+<meta name="author" content="김예일 (Yale Kim)">
+<meta name="robots" content="noindex, follow">
+<!-- /seo -->
+<style>
+  html, body { height: 100%; margin: 0; overflow: hidden; background: #fff; }
+  iframe { position: absolute; left: 0; top: 0; display: block; width: 1440px; border: 0; transform-origin: 0 0; }
+  .bar { position: fixed; z-index: 10; left: 0; right: 0; top: 0; display: none; align-items: center; min-height: calc(56px + env(safe-area-inset-top)); padding: env(safe-area-inset-top) 12px 0; box-sizing: border-box; background: #fff; box-shadow: 0 1px 0 rgba(0, 0, 0, .07); font-family: "Pretendard Variable", system-ui, -apple-system, "Apple SD Gothic Neo", sans-serif; }
+  .bar button { display: flex; align-items: center; gap: 5px; height: 36px; padding: 0 14px 0 11px; border: 0; border-radius: 999px; background: #F5F5F7; box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .06); font: inherit; font-size: 14px; font-weight: 600; letter-spacing: -.01em; color: #1D1D1F; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+  .bar button:active { background: #EBEBEF; transform: scale(.96); }
+  .bar button::before { content: ""; width: 8px; height: 13px; background: center / contain no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 20' fill='none' stroke='%231D1D1F' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 2L2 10l8 8'/%3E%3C/svg%3E"); }
+  .bar button::after { content: attr(data-t); }
+  .bar b { position: absolute; left: 50%; bottom: 18px; max-width: 46%; overflow: hidden; transform: translateX(-50%); text-overflow: ellipsis; white-space: nowrap; font-size: 16px; font-weight: 700; color: #000; }
+  @media (max-width: 767px) { .bar { display: flex; } }
+</style>
+<script src="../guard.js"></script>
+</head>
+<body>
+<iframe id="f" title="프로젝트 상세"></iframe>
+<header class="bar" id="bar"><button type="button" id="back" data-t="뒤로" aria-label="뒤로가기"></button><b id="name"></b></header>
+<script>
+// 프로젝트 상세를 창 폭과 상관없이 1440px PC 화면 그대로 띄우고 창에 맞춰 축소함
+(function () {
+  const W = 1440, FIT = 1200, frame = document.getElementById("f");
+  const page = new URLSearchParams(location.search).get("p") || "";
+  if (!/^[a-z0-9-]+\.html$/.test(page)) { location.replace("../index.html"); return; }
+  const fit = () => {
+    if (innerWidth >= FIT) { location.replace(page); return; }
+    const s = innerWidth / W, phone = innerWidth < 768, top = phone ? document.getElementById("bar").offsetHeight : 0;
+    frame.style.top = top + "px";
+    frame.style.height = (innerHeight - top) / s + "px";
+    frame.style.transform = `scale(${s})`;
+    // 상단바가 있으면 안쪽 페이지의 맥 창 막대를 숨김
+    try { frame.contentDocument.documentElement.classList.toggle("fit-m", phone); } catch (e) {}
+  };
+  const back = document.getElementById("back");
+  frame.addEventListener("load", () => {
+    try {
+      document.title = frame.contentDocument.title;
+      const t = frame.contentDocument.querySelector(".titlebar .title");
+      document.getElementById("name").textContent = t ? t.textContent : "";
+      fit();
+      if (frame.contentDocument.documentElement.dataset.lang === "en") back.dataset.t = "Back";
+    } catch (e) {}
+  });
+  back.addEventListener("click", () => {
+    // 홈 화면이 이 값을 보고 창이 폴더로 들어가는 효과를 재생함
+    try { sessionStorage.setItem("yk-return", frame.contentDocument.body.dataset.slug); } catch (e) {}
+    location.href = "../index.html";
+  });
+  fit();
+  frame.src = page;
+  addEventListener("resize", fit);
+})();
+</script>
+</body>
+</html>

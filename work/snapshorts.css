@@ -1,0 +1,309 @@
+/* SnapShorts 상세: 어두운 남색 바탕에 민트 하나. 작은 라벨, 가운데 정렬 제목, 번호 표시로 문제에서 솔루션까지 이어 감 */
+body[data-slug="snapshorts"] { --pink: #97F2D1; --ink: #0B0A26; --paper: #fff; --text: #14161A; --sn-bg: #100E33; --sn-bg2: #161442; --sn-card: #1E1C52; --sn-mint: #97F2D1; --sn-mut: #BDBBDD; --sn-line: rgba(151, 242, 209, .22); }
+.case.sn { background: #fff; font-family: "Pretendard Variable", Pretendard, var(--font); }
+.sn h1, .sn h2, .sn h3, .sn h4 { margin: 0; letter-spacing: -.03em; word-break: keep-all; text-wrap: balance; }
+.sn em { font-style: normal; color: var(--sn-mint); }
+.case.sn p { margin: 0; word-break: keep-all; }
+/* 스텝 태그: 유리 질감 */
+.case.sn .sn-lab { display: inline-flex; align-items: center; gap: 8px; padding: 7px 15px; border: 1px solid rgba(255, 255, 255, .26); border-radius: 99px; background: radial-gradient(120% 170% at 0 0, rgba(151, 242, 209, .3), transparent 62%), linear-gradient(135deg, rgba(255, 255, 255, .18), rgba(255, 255, 255, .05)); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .32), 0 10px 26px -10px rgba(0, 0, 0, .55); -webkit-backdrop-filter: blur(14px) saturate(160%); backdrop-filter: blur(14px) saturate(160%); font-family: "Google Sans", var(--font); font-size: 13px; font-weight: 600; letter-spacing: .02em; line-height: 1.2; color: #fff; }
+.case.sn .sn-lab b { font-weight: 700; color: var(--sn-mint); }
+
+/* 표지: 위쪽 좌우 정보, 문제 문구, 맥북과 영상이 나오는 휴대폰 */
+.pf-cover { z-index: 1; overflow: visible; padding-bottom: 0; border: 0; background: linear-gradient(180deg, #25A580 0, #1D9171 50%, #157D60 100%); color: #fff; }
+.m-lap .deck { box-shadow: 0 1.2cqw 2.4cqw -1cqw rgba(21, 18, 77, .4); }
+.pf-cover::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(rgba(255, 255, 255, .16) 1.2px, transparent 1.6px) 0 0 / 26px 26px; -webkit-mask-image: linear-gradient(180deg, #000 30%, transparent 92%); mask-image: linear-gradient(180deg, #000 30%, transparent 92%); }
+.pf-cover h1 { margin: 44px auto 0; letter-spacing: -.04em; color: #fff; }
+.pf-cover h1 .kw { white-space: nowrap; background: linear-gradient(110deg, #97F2D1 0%, #97F2D1 34%, #fff 45%, #fff 49%, #97F2D1 60%, #97F2D1 100%) 100% 0 / 260% 100%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: kw-shine 3.4s ease-in-out infinite; }
+@keyframes kw-shine { 0% { background-position: 100% 0; } 55%, 100% { background-position: 0% 0; } }
+@media (prefers-reduced-motion: reduce) { .pf-cover h1 .kw { animation: none; background-position: 50% 0; } }
+.case.sn .pf-cmeta, .case.sn .pf-cmeta span { color: #fff; }
+.pf-cover h1 .sel { color: #15124D; background: linear-gradient(#C9F9E7, #C9F9E7) no-repeat 0 .1em / 100% calc(100% - .16em); }
+.pf-cover h1 .sel b, .pf-cover h1 .sel b::before { background: var(--sn-mint); }
+.pf-stage { width: min(960px, 100%); margin-top: 28px; }
+.pf-stage .in { aspect-ratio: 1160 / 540; }
+.m-lap { left: 12%; bottom: 3%; width: 62%; }
+.sn-ph { position: relative; aspect-ratio: 9 / 18.6; padding: 7px; border-radius: 30px; background: #08071C; box-shadow: inset 0 0 0 1.5px #3A3866, 0 28px 50px -24px rgba(11, 10, 38, .7); }
+.sn-ph video { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: 24px; background: #fff; }
+.sn-ph .nt { position: absolute; z-index: 1; left: 50%; top: 13px; width: 30%; height: 12px; border-radius: 8px; background: #08071C; transform: translateX(-50%); }
+.pf-stage .sn-ph { left: 70%; bottom: 0; z-index: 2; width: 17%; padding: .6cqw; border-radius: 2.6cqw; transform: rotate(5deg); }
+.pf-stage .sn-ph video { border-radius: 2.1cqw; }
+.pf-stage .sn-ph .nt { top: 1.1cqw; height: .95cqw; }
+
+/* 아치: 흰 표지에서 어두운 본문으로 넘어가는 민트 타원 */
+.sn-dome { position: relative; overflow: hidden; margin-top: -1px; padding: 0 24px 120px; text-align: center; color: #15124D; background: linear-gradient(#157D60 0, #157D60 45%, var(--sn-bg) 45%); }
+.sn-dome .arch { position: absolute; left: -22%; right: -22%; top: 0; bottom: 34px; border-radius: 50%; background: linear-gradient(180deg, #157D60 0, #157D60 46%, #0F6B51 100%); }
+.sn-dome .in { position: relative; display: flex; flex-direction: column; align-items: center; gap: 20px; max-width: 760px; margin-inline: auto; padding-top: clamp(150px, 16vw, 210px); }
+.case.sn .sn-dome h2 { font-size: clamp(1.6rem, 3.2vw, 2.5rem); font-weight: 800; line-height: 1.34; color: #fff; }
+.case.sn .sn-dome p:not(.sn-lab) { max-width: 40em; font-size: 16px; line-height: 1.75; color: #fff; }
+.sn-go { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 99px; background: #15124D; font-size: 14.5px; font-weight: 600; color: #fff; text-decoration: none; transition: transform .2s; }
+.sn-go:hover { transform: translateY(-2px); }
+.sn-go svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.sn-go:focus-visible { outline: 2px solid var(--sn-mint); outline-offset: 3px; }
+
+/* 본문 공통 */
+.sn-b { padding-block: 110px; background: var(--sn-bg); text-align: center; color: #fff; }
+.sn-b h2 { margin-top: 16px; font-size: clamp(1.6rem, 3.2vw, 2.5rem); font-weight: 800; line-height: 1.34; }
+.case.sn .sn-lead { max-width: 37em; margin: 20px auto 0; font-size: 16px; line-height: 1.8; color: var(--sn-mut); }
+.sn-dots { display: flex; flex-direction: column; align-items: center; gap: 7px; margin-block: 16px 24px; }
+.sn-dots i { width: 4px; height: 4px; border-radius: 50%; background: var(--sn-mint); }
+.sn-dots i:nth-child(1) { opacity: .12; }
+.sn-dots i:nth-child(2) { opacity: .25; }
+.sn-dots i:nth-child(3) { opacity: .42; }
+.sn-dots i:nth-child(4) { opacity: .6; }
+.sn-dots i:nth-child(5) { opacity: .8; }
+
+/* 당시 보도: 4열 벽돌 배치, 위아래는 프레임에서 잘림. 민트 카드 한 장이 설명 */
+.sn-pressw { max-width: 1264px; margin: 48px auto 0; padding-inline: 32px; }
+.sn-press { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; overflow: hidden; text-align: left; }
+.sn-press .col { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.sn-press .col { --g: 30px; }
+.sn-press .col:nth-child(2) { --g: 68px; }
+.sn-press .col:nth-child(3) { --g: 12px; }
+.sn-press .col:nth-child(4) { --g: 50px; }
+/* 위아래 남는 자리는 내용 없는 어두운 회색 네모. 바깥쪽은 바탕색으로 사라짐 */
+.sn-blank { display: block; flex: none; height: calc(24px + var(--g)); margin-top: -24px; border-radius: 12px; background: linear-gradient(to top, #17171B, var(--sn-bg) calc(100% - 24px)); }
+.col > .sn-blank:last-child { flex: 1 0 48px; height: auto; margin: 0 0 -24px; background: linear-gradient(to bottom, #17171B, var(--sn-bg) calc(100% - 24px)); }
+.sn-news, .sn-note { display: flex; flex-direction: column; flex: none; padding: 14px 16px; border-radius: 12px; }
+.sn-news { background: #fff; text-decoration: none; transition: transform .2s; }
+.sn-news:hover, .sn-news:focus-visible { transform: translateY(-3px); }
+.sn-news small { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 22px; font-size: 12px; color: #6A6889; }
+.sn-news small b { font-size: 15px; font-weight: 800; color: #15124D; }
+.sn-news .lg { display: block; flex: none; width: auto; height: 20px; max-width: 62%; object-fit: contain; object-position: left center; }
+.sn-news .hl { display: block; width: 100%; height: auto; padding-top: 10px; }
+.sn-note { background: var(--sn-mint); color: #15124D; }
+.sn-press .sn-note h3 { font-size: 16.5px; font-weight: 800; line-height: 1.4; color: #15124D; }
+.case.sn .sn-note p { margin-top: 12px; font-size: 14px; line-height: 1.65; color: #1F1D54; }
+
+/* 7단계: 줄을 바꿔 가며 이어지는 공정도. 좁으면 도표째 옆으로 넘겨 봄 */
+.sn-pathw { max-width: 1120px; margin: 40px auto 0; padding: 16px 32px; text-align: left; }
+.sn-path { --h: 150px; --y: 50px; --c: 56px; --line: rgba(255, 255, 255, .34); position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: var(--h); column-gap: 20px; margin: 0; padding: 0 var(--c); list-style: none; }
+.case.sn .sn-path li { position: relative; min-width: 0; }
+.sn-path .hd { display: flex; align-items: center; height: 38px; }
+.sn-path .rtl .hd { justify-content: flex-end; }
+.sn-path .ic { display: grid; flex: none; place-items: center; width: 38px; height: 38px; border-radius: 50%; box-shadow: inset 0 0 0 1px var(--line); }
+.sn-path .ic svg { width: 18px; height: 18px; fill: none; stroke: var(--sn-mint); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.sn .sn-path h3 { display: flex; align-items: center; gap: 7px; height: 38px; margin: 0 2px; padding: 0 16px 0 14px; border-radius: 99px; background: rgba(255, 255, 255, .15); font-size: 13.5px; font-weight: 600; color: #fff; white-space: nowrap; }
+.sn-path h3 b { font-weight: 800; color: var(--sn-mint); }
+.sn-path .goal .hd { margin-top: calc(var(--y) - 19px); }  /* 화살표 높이와 가운데 맞춤 */
+.sn-path .goal .ic svg { fill: var(--sn-mint); stroke: none; width: 20px; height: 20px; }
+.sn .sn-path .goal h3 { background: var(--sn-mint); font-weight: 800; color: #15124D; }
+.case.sn .sn-path p { position: absolute; left: 0; right: 16px; top: calc(var(--y) + 10px); font-size: 13px; line-height: 1.55; color: var(--sn-mut); }
+.case.sn .sn-path .rtl p { left: 16px; right: 0; text-align: right; }
+/* 선과 화살표는 snapshorts.js가 SVG 하나로 그림: 두께와 색이 어디서나 같음 */
+.case.sn .sn-path .wire { position: absolute; inset: 0; pointer-events: none; }
+.sn-path .wire svg { display: block; width: 100%; height: 100%; overflow: visible; }
+.sn-path .wire path { fill: none; stroke: #6F6D94; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.sn-path .wire .dash { stroke-dasharray: 5 6; stroke-linecap: butt; }
+
+/* 단계별 모델과 크레딧 */
+
+/* 근본 원인 */
+.sn-root { position: relative; display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 50px 32px 36px; border-radius: 16px; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .2); background: rgba(255, 255, 255, .04); }
+.case.sn .sn-goal { position: absolute; left: 50%; top: 0; padding: 8px 20px; border-radius: 99px; background: var(--sn-mint); font-family: "Google Sans", var(--font); font-size: 13px; font-weight: 700; letter-spacing: .05em; line-height: 1; color: #15124D; white-space: nowrap; transform: translate(-50%, -50%); }
+.sn-root h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 700; line-height: 1.5; color: #fff; }
+.case.sn .sn-root > p:not(.sn-goal) { max-width: 40em; font-size: 14px; line-height: 1.7; color: rgba(255, 255, 255, .55); }
+
+/* 솔루션: 어두운 바탕 위 라운드 패널, 화면 위에 떠 있는 UI 카드, 빛나는 원 위의 기기들 */
+/* STEP 03 모델: 원본 로고 타일을 한 줄로 놓고, 타일마다 고른 이유를 붙임 */
+.sn-why { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin: 52px 0 0; padding: 0; list-style: none; }
+.case.sn .sn-why .w { position: relative; display: flex; flex-direction: column; align-items: center; min-width: 0; padding: 30px 16px 24px; border-radius: 20px; background: rgba(255,255,255,.035); box-shadow: inset 0 0 0 1px rgba(255,255,255,.07); text-align: center; }
+.sn-why .ic { display: grid; place-items: center; width: 76px; height: 76px; border-radius: 22px; background: linear-gradient(160deg, #ffffff, #eef0f5); box-shadow: 0 10px 30px -8px var(--glow), 0 0 36px -6px var(--glow); }
+.sn-why .ic img { width: 52%; height: 52%; }
+.case.sn .sn-why small { margin-top: 20px; font-size: 12.5px; font-weight: 600; color: var(--sn-mint); }
+.case.sn .sn-why b { margin-top: 6px; font-size: 15px; font-weight: 700; line-height: 1.35; color: #fff; }
+.case.sn .sn-why i { font-style: normal; font-size: 13px; color: var(--sn-mut); }
+.case.sn .sn-why .vs { align-self: stretch; margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.08); }
+.case.sn .sn-why .vs em { display: block; font-style: normal; font-size: 11.5px; font-weight: 600; color: rgba(255,255,255,.45); }
+.case.sn .sn-why .vs div { display: flex; flex-direction: column; align-items: center; gap: 5px; margin-top: 8px; }
+.case.sn .sn-why .vs span { padding: 3px 9px; border-radius: 999px; background: rgba(255,255,255,.06); box-shadow: inset 0 0 0 1px rgba(255,255,255,.08); font-size: 11.5px; line-height: 1.5; color: rgba(255,255,255,.6); white-space: nowrap; }
+.case.sn .sn-why p { margin-top: 14px; font-size: 13.5px; line-height: 1.65; color: rgba(255,255,255,.78); word-break: keep-all; }
+.sn-why .w-px { --glow: rgba(31,184,205,.8); }
+.sn-why .w-gm { --glow: rgba(120,140,240,.8); }
+.sn-why .w-el { --glow: rgba(255,255,255,.4); }
+.sn-why .w-nb { --glow: rgba(255,200,40,.8); }
+.sn-why .w-veo { --glow: rgba(66,133,244,.8); }
+.sn-b.sn-sol { position: relative; overflow: clip; color: #15124D; }
+.sn-sol > * { position: relative; }
+.case.sn .sn-sol > .pf-in > .sn-lab { border-color: rgba(14, 143, 108, .28); background: radial-gradient(120% 170% at 0 0, rgba(151, 242, 209, .7), transparent 66%), linear-gradient(135deg, rgba(151, 242, 209, .28), rgba(151, 242, 209, .08)); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .9), 0 10px 24px -12px rgba(14, 143, 108, .55); color: #15124D; }
+.case.sn .sn-sol > .pf-in > .sn-lab b { color: #0B6B50; }
+.sn-sol > .pf-in > h2 { color: #15124D; }
+.sn-sol > .pf-in > h2 em { color: #0E8F6C; }
+.case.sn .sn-sol > .pf-in > .sn-lead { color: #4B4A6B; }
+.case.sn .sn-pill { display: inline-block; padding: 5px 13px; border-radius: 8px; background: var(--sn-mint); font-size: 13px; font-weight: 700; color: #15124D; }
+/* 기능마다: 라벨과 제목, 화면 전체 캡처, 화면에서 선으로 뽑아낸 상세 설명 */
+.sn-fns { display: grid; gap: 120px; margin-top: 80px; text-align: left; }
+.sn-fn .hd { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+.case.sn .sn-sol .lb { font-family: "Google Sans", var(--font); font-size: 14px; font-weight: 700; color: #0E8F6C; }
+.sn-fn h3 { margin-top: 10px; }
+.sn-fn .fw { position: relative; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 3fr); align-items: center; gap: 56px; margin-top: 32px; }
+.sn-fn.rev .fw { grid-template-columns: minmax(0, 3fr) minmax(0, 7fr); }
+.sn-fn.rev .scr { order: 2; }
+.sn-fn .scr { overflow: hidden; padding: 6px; border-radius: 16px; background: #fff; box-shadow: 0 0 0 2px var(--sn-mint), 0 26px 56px -24px rgba(21, 18, 77, .4); }
+.sn-fn .scr img { display: block; width: 100%; height: auto; border-radius: 10px; }
+.cos { display: grid; gap: 28px; margin: 0; padding: 0; list-style: none; }
+.case.sn .cos li { min-width: 0; color: #15124D; }
+.cos .mk { overflow: hidden; padding: 8px; border-radius: 12px; background: #fff; box-shadow: 0 10px 26px -14px rgba(21, 18, 77, .4), 0 0 0 1px rgba(21, 18, 77, .1); }
+.cos .mk img { display: block; width: 100%; height: auto; }
+.cos .mk img[src*="ui-based"], .cos .mk img[src*="ui-choose"], .cos .mk img[src*="ui-hook"], .cos .mk img[src*="ui-prompt"] { width: 165%; max-width: none; }
+.cos b { display: block; margin-top: 12px; font-size: 13.5px; font-weight: 700; color: #0E8F6C; }
+.case.sn .cos p { margin-top: 4px; font-size: 13.5px; line-height: 1.6; color: #4B4A6B; }
+.sn-fn .wires { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.sn-fn .wires path { fill: none; stroke: #3DBF9A; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.sn-fn .wires circle { fill: #3DBF9A; stroke: #fff; stroke-width: 1.5; }
+.sn-sol h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; line-height: 1.34; color: #15124D; }
+.case.sn .sn-sol .d { font-size: 15px; line-height: 1.55; color: #4B4A6B; }
+/* 가운데 제목과 기기 구성 */
+.sn-chead { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 110px; }
+.sn-sol .sn-chead h3 { color: #15124D; }
+.case.sn .sn-sol .sn-chead .d { color: #4B4A6B; }
+
+/* Function 5: 실제 영상을 휴대폰 세 대로 */
+.sn-vids { display: grid; grid-template-columns: repeat(3, minmax(0, 260px)); justify-content: center; gap: 28px; margin-top: 44px; margin-bottom: 64px; }
+.sn-v { margin: 0; min-width: 0; }
+.sn-v figcaption { margin-top: 14px; font-size: 13.5px; font-weight: 600; line-height: 1.5; color: #15124D; word-break: keep-all; }
+.sn-snd { position: absolute; z-index: 2; right: 16px; top: 34px; width: 34px; height: 34px; padding: 0; border: 0; border-radius: 50%; background: rgba(11, 10, 43, .72) center / 18px no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 10v4h3l5 4V6L7 10z'/%3E%3Cpath d='M16 9.5l4.5 5M20.5 9.5l-4.5 5'/%3E%3C/svg%3E"); cursor: pointer; }
+.sn-snd[aria-pressed="true"] { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 10v4h3l5 4V6L7 10z'/%3E%3Cpath d='M16 9a4.5 4.5 0 0 1 0 6M18.8 6.5a8 8 0 0 1 0 11'/%3E%3C/svg%3E"); }
+.sn-snd:focus-visible { outline: 2px solid var(--sn-mint); outline-offset: 2px; }
+
+/* 섹션 사이: 경계선 없이 다음 섹션 색으로 이어짐. 솔루션만 흰 바탕 */
+.case.sn > section + section { margin-top: -1px; }
+.case.sn > .pf-cover + .sn-dome { margin-top: -1px; }
+.sn-b { --fade: 170px; padding-top: 72px; padding-bottom: var(--fade); }
+.sn-b[id$="problem"], .sn-b[id$="process"] { --fade: 72px; }
+.sn-b[id$="problem"] { background: linear-gradient(var(--sn-bg) calc(100% - var(--fade)), var(--sn-bg2)); }
+.sn-b[id$="process"] { background: linear-gradient(var(--sn-bg2) calc(100% - var(--fade)), var(--sn-bg)); }
+/* 남색에서 흰색으로 바로 섞으면 회색이 되므로 보라빛 중간색을 거치며 천천히 밝아짐 */
+.sn-b[id$="models"] { --fade: 260px; background: linear-gradient(var(--sn-bg) calc(100% - var(--fade)), #17164A calc(100% - var(--fade) * .82), #2B2A72 calc(100% - var(--fade) * .64), #5457A8 calc(100% - var(--fade) * .46), #9396D2 calc(100% - var(--fade) * .3), #CBCDEC calc(100% - var(--fade) * .16), #EEF0FA calc(100% - var(--fade) * .06), #fff); }
+.sn-b.sn-sol { padding-top: 40px; }
+.sn-b.sn-sol { padding-bottom: 0; background: #fff; }
+
+/* 끝맺음과 다음 프로젝트 띠(Bloom 색) */
+.sn-end { background: #fff; }
+.case.sn .sn-end .ty { color: #15124D; }
+.pf-nxp { background: #0A0A0A; }
+.pf-nxp .k p { color: #FFB3C7; }
+.pf-nxp .go { background: #FFB3C7; color: #0A0A0A; }
+.pf-nxp a:hover h2 { color: #FFB3C7; }
+.pf-nxp a:hover .go { background: #FFC9D8; }
+.pf-nxp a:focus-visible { outline-color: #FFB3C7; }
+
+@media (max-width: 900px) {
+  .sn-press { display: block; height: auto; columns: 2; column-gap: 12px; }
+  .sn-press .col:nth-child(n) { display: contents; }
+  .sn-press .col > :nth-child(n) { margin-top: 0; margin-bottom: 12px; break-inside: avoid; }
+  .sn-press .col > .sn-blank { display: none; }
+  .sn-fn .fw, .sn-fn.rev .fw { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .sn-fn.rev .scr { order: 0; }
+  .sn-fn .wires { display: none; }
+  .cos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .sn-chead { margin-top: 80px; }
+}
+@media (max-width: 640px) {
+  .pf-cover h1 { margin-top: 36px; }
+  .pf-stage .in { aspect-ratio: 1160 / 720; }
+  .m-lap { left: 8%; width: 66%; }
+  .pf-stage .sn-ph { left: 70%; width: 25%; padding: 1cqw; border-radius: 3.8cqw; }
+  .pf-stage .sn-ph video { border-radius: 3cqw; }
+  .pf-stage .sn-ph .nt { top: 1.8cqw; height: 1.4cqw; }
+  .sn-dome { padding: 0 16px 90px; }
+  .sn-dome .arch { left: -50%; right: -50%; }
+  .sn-dome .in { padding-top: 120px; }
+  .case.sn .sn-dome p:not(.sn-lab), .case.sn .sn-lead { font-size: 15px; }
+  .sn-b { padding-block: 72px; }
+  .sn-b { --fade: 110px; padding-top: 56px; }
+  .sn-b[id$="problem"], .sn-b[id$="process"] { --fade: 56px; }
+  .sn-b[id$="models"] { --fade: 170px; }
+  .sn-b.sn-sol { padding-top: 32px; }
+  .sn-pressw { padding-inline: 16px; }
+  .sn-pathw { margin-top: 28px; padding: 0 16px; }
+  /* 휴대폰: 줄바꿈 공정도는 글자가 너무 작아져서 세로로 이음 */
+  .sn-path { display: block; padding: 0; }
+  .case.sn .sn-path li.st { display: grid; grid-template-columns: 38px minmax(0, 1fr); column-gap: 10px; padding-bottom: 22px; }
+  .case.sn .sn-path li.st::before { content: ""; display: block; position: absolute; left: 19px; top: 38px; bottom: 0; width: 1px; height: auto; border-radius: 0; background: var(--line); }
+  .case.sn .sn-path li.goal { padding-bottom: 0; }
+  .case.sn .sn-path li.goal::before { content: none; }
+  .sn-path .st .hd, .sn-path .rtl .hd, .sn-path .goal .hd { display: contents; }
+  .sn .sn-path h3 { justify-self: start; }
+  .case.sn .sn-path p, .case.sn .sn-path .rtl p { position: static; grid-column: 2; margin-top: 8px; font-size: 14px; text-align: left; }
+  .case.sn .sn-path .wire { display: none; }
+  .sn-press { columns: 1; }
+  .sn-press .col > :nth-child(n) { margin-bottom: 8px; }
+  .n-sogang, .n-nate2, .n-tv1, .n-tv2, .n-news1, .n-kyeonggi { display: none; }
+  .sn-b h2 br, .sn-root h3 br, .sn-chead h3 br { display: none; }
+  .sn h2.sn-two br { display: none; }
+  .sn-root { padding: 32px 20px; }
+  .sn-fns { margin-top: 48px; gap: 64px; }
+  .cos { grid-template-columns: minmax(0, 1fr); }
+  .sn-vids { gap: 10px; margin-bottom: 40px; }
+  .sn-ph { padding: 4px; border-radius: 18px; }
+  .sn-ph video { border-radius: 14px; }
+  .sn-ph .nt { top: 8px; height: 7px; }
+  .sn-v figcaption { font-size: 12px; }
+  .sn-snd { right: 8px; top: 20px; width: 26px; height: 26px; background-size: 14px; }
+}
+.sn-fn .fw.fw2, .sn-fn.rev .fw.fw2 { grid-template-columns: minmax(0, 7fr) minmax(0, 3fr); margin-top: 56px; }
+.sn-fn.rev .fw2 .scr { order: 0; }
+@media (max-width: 900px) {
+  .sn-fn .fw.fw2, .sn-fn.rev .fw.fw2 { grid-template-columns: minmax(0, 1fr); margin-top: 32px; }
+}
+.pf-cover .pf-mlogo { height: 34px; margin-block: -10px; }
+
+/* ===== PDF 포트폴리오 기준: 디자인 시스템과 회고 (2026-11-12) ===== */
+/* 디자인 시스템: 모델 섹션의 흰 끝에서 옅은 민트로 갔다가 다시 흰 솔루션으로 */
+.sn-b.sn-ds { --fade: 120px; padding-top: 40px; color: #15124D; background: linear-gradient(#fff 0, #EEF6F2 200px, #EEF6F2 calc(100% - 200px), #fff); }
+.sn-ds h2, .sn-rt h2 { color: #15124D; }
+.sn-ds h2 em, .sn-rt h2 em { color: #0E8F6C; }
+.case.sn .sn-ds .sn-lead, .case.sn .sn-rt .sn-lead { color: #4B4A6B; }
+.case.sn .sn-ds .sn-lab, .case.sn .sn-rt .sn-lab { border-color: rgba(14, 143, 108, .28); background: radial-gradient(120% 170% at 0 0, rgba(151, 242, 209, .7), transparent 66%), linear-gradient(135deg, rgba(151, 242, 209, .28), rgba(151, 242, 209, .08)); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .9), 0 10px 24px -12px rgba(14, 143, 108, .55); color: #15124D; }
+.case.sn .sn-ds .sn-lab b, .case.sn .sn-rt .sn-lab b { color: #0B6B50; }
+.sn-dsg { display: grid; grid-template-columns: minmax(0, 2.15fr) minmax(0, 1fr) minmax(0, .9fr); gap: 16px; max-width: 1180px; margin: 52px auto 0; padding-inline: 32px; text-align: left; }
+.sn-dsg .dst, .sn-dsg .dsc, .sn-dsg .dsn { border-radius: 20px; overflow: hidden; box-shadow: 0 24px 50px -36px rgba(14, 60, 46, .35); }
+.sn-dsg .dst { padding: 34px 36px; background: #fff; }
+.case.sn .sn-dsg .fx { font: 500 40px/1 "Pretendard Variable", Pretendard, sans-serif; letter-spacing: -.02em; color: #000220; }
+.sn-dsg table { width: 100%; margin-top: 22px; border-collapse: collapse; color: #000220; }
+.sn-dsg th { padding: 0 0 10px; border-bottom: 1px solid #dfe5e2; text-align: left; font: 500 13px/1 "Google Sans", var(--font); color: #62748E; }
+.sn-dsg td { padding: 11px 0; font-size: 15px; font-weight: 600; white-space: nowrap; }
+.sn-dsg td.nm { width: 104px; font: 500 13px/1 "Google Sans", var(--font); color: #62748E; }
+.sn-dsg th:nth-child(3), .sn-dsg td:nth-child(3) { width: 60px; }
+.sn-dsg th:nth-child(4), .sn-dsg td:nth-child(4) { width: 80px; }
+.sn-dsg .dsc { display: flex; flex-direction: column; }
+.sn-dsg .dsc .big { flex: 1; display: flex; flex-direction: column; justify-content: space-between; gap: 24px; padding: 24px 24px; background: #95F5D3; color: #0F0D4E; }
+.case.sn .sn-dsg .dsc .big p { font: 600 14px/1.5 "Google Sans", var(--font); }
+.sn-dsg .dsc .big b { align-self: flex-end; text-align: right; font-size: 16px; font-weight: 700; line-height: 1.5; word-break: keep-all; }
+.sn-dsg .dsc .r, .sn-dsg .dsn div { display: flex; gap: 10px; align-items: center; padding: 0 22px; font: 500 13px/1 "Google Sans", var(--font); }
+.sn-dsg .dsc .r { height: 54px; }
+.sn-dsg .dsc .r b, .sn-dsg .dsn b { font-weight: 700; }
+.sn-dsg .dsn { display: grid; grid-template-rows: repeat(8, minmax(44px, 1fr)); }
+
+/* 회고: 옅은 민트 바탕 아래로 흰 반원, 탭에서 줄로 이어진 카드 세 장 */
+.sn-b.sn-rt { --fade: 120px; position: relative; overflow: clip; color: #15124D; background: linear-gradient(180deg, #fff 0, #f1f8f4 200px, #e8f3ee 100%); }
+.sn-rt .arc { position: absolute; left: -12%; right: -12%; top: 470px; height: 1400px; border-radius: 50%; background: rgba(255, 255, 255, .6); }
+.sn-rt .pf-in { position: relative; max-width: 1180px; }
+.sn-rtg { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin: 64px 0 0; padding: 0; list-style: none; }
+.sn-rtg li { display: flex; flex-direction: column; align-items: center; }
+.sn-rtg li.c0, .sn-rtg li.c2 { margin-top: 48px; }
+.sn-rtg li.c1 { margin-bottom: 48px; }
+.case.sn .sn-rtg .tab { width: 100%; padding: 17px 0; border-radius: 10px; background: #2fd39a; text-align: center; font: 700 18px/1 "Google Sans", var(--font); letter-spacing: .02em; color: #0F0D4E; }
+.sn-rtg .cn { position: relative; width: 2px; height: 26px; background: #2fd39a; }
+.sn-rtg .cn::after { content: ""; position: absolute; left: 50%; bottom: -8px; width: 13px; height: 13px; transform: translateX(-50%); border-radius: 50%; background: #2fd39a; box-shadow: 0 0 0 6px rgba(47, 211, 154, .3); }
+.sn-rtg .cd { flex: 1; width: 100%; box-sizing: border-box; padding: 32px 30px 36px; border-radius: 12px; background: #fff; text-align: center; box-shadow: 0 30px 60px -36px rgba(14, 90, 60, .45); }
+.sn-rtg .ic svg { width: 120px; height: 104px; overflow: visible; margin-top: -10px; margin-bottom: -8px; }
+.sn-rtg small { display: block; margin-top: 18px; font-size: 14px; font-weight: 700; line-height: 1; color: #1f8a68; }
+.sn-rtg .c1 small { color: #d0573c; }
+.sn .sn-rtg h3 { margin-top: 10px; font-size: 22px; font-weight: 800; line-height: 1.38; color: #15141f; }
+.case.sn .sn-rtg .cd p { margin-top: 12px; font-size: 15px; line-height: 1.65; color: #6b6e78; }
+/* 회고 아래 흰 반원 색에서 Thank you로 이어짐 */
+.sn-rt + .sn-end { background: linear-gradient(#f6faf8, #fff 160px); }
+
+/* 솔루션 시작: Agent처럼 큰 제품 이름과 노트북 목업 */
+.sn-fp { margin: 11px 0 120px; }
+.case.sn .sn-fp .lb { font-family: "Google Sans", var(--font); font-size: 14px; font-weight: 700; color: #0E8F6C; }
+.case.sn .sn-fp .prod { margin-top: 0; padding-bottom: .08em; font-family: "Google Sans", var(--font); font-size: clamp(3rem, 8.5vw, 5.8rem); font-weight: 800; line-height: 1.12; letter-spacing: -.05em; background: linear-gradient(180deg, #15124D 30%, #1FA57E); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.case.sn .sn-fp .tag { margin-top: 16px; font-size: 20px; font-weight: 700; letter-spacing: -.02em; color: #15124D; }
+.sn-lap { width: min(760px, 86%); margin: 56px auto 0; }
+.sn-lap .lid { padding: .6%; border-radius: 18px 18px 6px 6px; background: linear-gradient(180deg, #E4E6EB, #B9BDC6); box-shadow: 0 40px 90px rgba(21, 18, 77, .22), 0 0 120px rgba(31, 165, 126, .16); }
+.sn-lap .scr { position: relative; padding: 1.6% 1.6% 2.4%; border-radius: 13px 13px 3px 3px; background: #07080B; }
+.sn-lap .scr img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: 0 0; border-radius: 3px; }
+.sn-lap .notch { position: absolute; left: 50%; top: 0; width: 10%; height: 3.2%; transform: translateX(-50%); border-radius: 0 0 7px 7px; background: #07080B; }
+.sn-lap .deck { position: relative; height: 0; padding-bottom: 2.4%; margin: 0 -6.5%; border-radius: 2px 2px 18px 18px / 2px 2px 12px 12px; background: linear-gradient(180deg, #F1F2F5 0%, #C9CCD3 35%, #9A9EA8 100%); box-shadow: 0 18px 30px rgba(21, 18, 77, .25); }
+.sn-lap .deck::before { content: ""; position: absolute; left: 50%; top: 0; width: 15%; height: 42%; transform: translateX(-50%); border-radius: 0 0 10px 10px; background: linear-gradient(180deg, #A7ABB4, #C4C7CE); }
